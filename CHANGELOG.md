@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.5] - 2026-04-02
+## [1.0.6] - 2026-04-02
 ### 🛡️ Absolute Zero-Trust Patch (绝对零污染修复)
 - **Hardcoded Placeholder Purge**: Scoured and removed all hardcoded placeholder tokens (e.g., `TOP_SECRET_LAB_001`, `SEMICOND_SEC_KEY`) from core files (`s2_twl_hybrid_bridge.py`) and documentation (`SEMICONDUCTOR_DEPLOYMENT_GUIDE.md`). Replaced entirely with strict `os.environ.get()` checks and `sys.exit(1)` triggers.
 - **Documentation Alignment**: Synchronized code snippets in documentation with the actual `semiconductor_lab_demo.py` execution flow to eliminate supply-chain ambiguities.
