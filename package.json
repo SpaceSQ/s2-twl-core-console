@@ -1,51 +1,15 @@
 {
-  "name": "s2-space-agent-os",
-  "version": "1.1.3",
-  "description": "S2 Mothership [3.22 Native] - Spatial logic framework for Openclaw.",
-  "main": "handler.py",
-  "scripts": {
-    "start": "python3 handler.py",
-    "install": "pip install -r requirements.txt"
-  },
+  "name": "s2-twl-core-console",
+  "version": "1.0.5",
+  "description": "Taohuayuan World Lab Core Console. Standalone package with absolute zero-trust credential enforcement.",
+  "main": "twl_lab_console.py",
   "openclaw": {
-    "extensions": [
-      "openclaw.plugin.json"
-    ],
-    "compat": {
-      "pluginApi": ">=3.22.0"
-    },
-    "capabilities": ["spatial", "heartbeat", "actuator"],
-    "configSchema": {
-      "type": "object",
-      "required": ["S2_PRIVACY_CONSENT"],
-      "properties": {
-        "S2_PRIVACY_CONSENT": {
-          "type": "string",
-          "description": "Set to '1' to consent to spatial data processing.",
-          "default": "0"
-        },
-        "S2_ENABLE_REAL_ACTUATION": {
-          "type": "string",
-          "description": "Set to '1' to enable physical IoT device control.",
-          "default": "0"
-        },
-        "HA_URL": {
-          "type": "string",
-          "description": "Your Home Assistant Instance URL."
-        },
-        "HA_TOKEN": {
-          "type": "string",
-          "description": "Long-lived Access Token for Home Assistant."
-        }
-      }
+    "compat": { "pluginApi": "^1.0.0" },
+    "build": { "openclawVersion": "^1.0.0" },
+    "extensions": ["./openclaw.plugin.json"],
+    "secrets": ["TWL_LAB_TOKEN"],
+    "environment": {
+      "TWL_LAB_TOKEN": "Mandatory authentication token for physical lab bridging."
     }
-  },
-  "keywords": [
-    "openclaw",
-    "agent",
-    "spatial",
-    "s2"
-  ],
-  "author": "Space2.world",
-  "license": "MIT"
+  }
 }
