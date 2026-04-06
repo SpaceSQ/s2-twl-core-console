@@ -1,15 +1,20 @@
 {
-  "name": "s2-twl-core-console",
-  "version": "1.0.5",
-  "description": "Taohuayuan World Lab Core Console. Standalone package with absolute zero-trust credential enforcement.",
-  "main": "twl_lab_console.py",
+  "name": "s2-sp-os-grand-unified-engine",
+  "version": "3.0.0",
+  "description": "The Grand Unified S2 Space Operating System Engine. Integrates Lord-Guest Asymmetric Governance, Dynamic Boundary Scanning, Multimodal Fusion for Illusion Resolution, and Swarm Sync Right-of-Way Arbitration into a single robust Embodied AI pipeline.",
+  "main": "handler.py",
+  "scripts": { "sim": "python3 simulations/demo_grand_unified_lifecycle.py" },
   "openclaw": {
-    "compat": { "pluginApi": "^1.0.0" },
-    "build": { "openclawVersion": "^1.0.0" },
-    "extensions": ["./openclaw.plugin.json"],
-    "secrets": ["TWL_LAB_TOKEN"],
-    "environment": {
-      "TWL_LAB_TOKEN": "Mandatory authentication token for physical lab bridging."
-    }
-  }
+    "extensions": ["openclaw.plugin.json"],
+    "compat": { "pluginApi": ">=3.22.0" },
+    "capabilities": [
+      "spatio_temporal_visa", 
+      "lord_guest_negotiation",
+      "mmwave_boundary_scanning",
+      "multimodal_latent_fusion",
+      "pki_swarm_sync_arbitration",
+      "immutable_spatial_ledger"
+    ]
+  },
+  "author": "Space2.world (Miles Xiang)"
 }

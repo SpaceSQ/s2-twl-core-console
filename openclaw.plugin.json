@@ -1,22 +1,12 @@
 {
-  "id": "s2-twl-core-console",
-  "pluginId": "s2-twl-core-console",
-  "version": "1.0.5",
+  "id": "s2-indoor-jurisdiction-negotiator",
+  "pluginId": "s2-indoor-jurisdiction-negotiator",
+  "version": "2.0.0",
   "type": "native-code",
-  "entry": "twl_lab_console.py",
+  "entry": "handler.py",
   "runtime": "python3",
-  "configSchema": {
-    "type": "object",
-    "properties": {
-      "default_sssu_count": {
-        "type": "integer",
-        "default": 1,
-        "description": "Default lab scale (1-9 SSSU)"
-      }
-    },
-    "required": ["default_sssu_count"]
-  },
-  "secrets": [
-    "TWL_LAB_TOKEN"
-  ]
+  "permissions": {
+    "network": ["localhost"],
+    "tools": ["manage_spatial_jurisdiction"]
+  }
 }
